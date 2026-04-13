@@ -20,7 +20,7 @@ import { CopyButton } from "@/components/ui/copy-button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-const BOT_USERNAME = "getmytgidbot"; // Change this to your bot username
+const BOT_USERNAME = "gal_telegram_user_info_bot";
 
 const steps = [
   {
