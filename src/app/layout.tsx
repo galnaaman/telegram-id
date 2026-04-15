@@ -1,31 +1,30 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
-
 export const metadata: Metadata = {
-  title: "Get Your Telegram ID — Free & Instant",
+  title: "Get your Telegram ID — free, instant, zero tracking",
   description:
-    "Find your Telegram user ID instantly. Free tool — just message our bot and get your ID in seconds. No signup required.",
-  keywords: ["telegram id", "telegram user id", "find telegram id", "get telegram id", "telegram chat id"],
+    "Find your Telegram user ID, group ID, or channel ID. Message the bot, get the number. No signup, no data stored.",
+  keywords: [
+    "telegram id",
+    "telegram user id",
+    "find telegram id",
+    "get telegram id",
+    "telegram chat id",
+  ],
   openGraph: {
-    title: "Get Your Telegram ID — Free & Instant",
-    description: "Find your Telegram user ID instantly. Free tool — no signup required.",
+    title: "Get your Telegram ID",
+    description:
+      "Message the bot. Get your ID. No signup, no tracking.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get Your Telegram ID — Free & Instant",
-    description: "Find your Telegram user ID instantly. Free tool — no signup required.",
+    title: "Get your Telegram ID",
+    description:
+      "Message the bot. Get your ID. No signup, no tracking.",
   },
 };
 
@@ -36,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased bg-zinc-950 text-white`}>
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}
+        style={{ backgroundColor: "#0a0a0a", color: "#fafafa" }}
+      >
         {children}
       </body>
     </html>
